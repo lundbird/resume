@@ -1,0 +1,175 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://sourabhbajaj.com/}{\Large Alex Lundberg}} & Email : \href{mailto:alex.lundberg@gmail.com}{alex.lundberg@gmail.com}\\
+  \href{http://sourabhbajaj.com/}{https://lundbird.github.io} & Mobile : +1-123-456-7890 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Wisconsin Madison}{Madison, Wi}
+      {Bachelor of Science in Computer Science;  GPA: 3.77}{Sep. 2014 -- May. 2019}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {S\&C Electric}{Chicago, IL}
+      {Software Engineer Intern}{May 2018 - Aug 2018}
+      \resumeItemListStart
+      \resumeItem{Continuous Integration}
+          {Created pipeline from Git checkins to testing to deployment using Jenkins, Bash, and Powershell scripting}
+        \resumeItem{Test Automation}
+          {Created and packaged python wrapper libraries for testers to use internal testing tools and link to cloud servicing applications}
+        \resumeItem{Cloud Servicing}
+          {Responsible for deployment of test-automation-platform including asset reservation portal, servicing, and analytics reporting}
+        \resumeItem{System Administration}
+          {Troubleshooted Linux build errors, hardware failures, and network configuration problems across testing devices}
+
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {S\&C Electric}{Chicago, IL}
+      {Software Engineer Intern}{Sep 2017 - Dec 2018}
+      \resumeItemListStart
+        \resumeItem{Machine Learning}
+          {Created machine learning models with python pandas and sklearn to predict downtime and failure causing events on injection molding machines}
+        \resumeItem{Automation}
+          {Created automatic SQL queries across multiple database sources to update department's reporting and analytics}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Domtar}{Nekoosa, WI}
+      {Software Engineer Intern}{Jan 2017 - Aug 2017}
+      \resumeItemListStart
+        \resumeItem{Machine learning}
+          {Used machine learning with python pandas and sklearn to determine causes for paper defects by analyzing time series data from paper machine and lab tests}
+        \resumeItem{Automation}
+          {Automated tracking of grade change data with C\# application to pull data from storage and display and export to management.}
+        \resumeItem{Development}
+          {Created C\# application to set machine tolerance limits and display alarms and data logs to operators on machine failures.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Blood Research Institute}{Milwaukee, WI}
+      {Computer Vision Intern}{May 2015 - Aug 2015}
+      \resumeItemListStart
+        \resumeItem{Image Recognition}
+          {Created pipeline using computer vision software ImageJ to filter, cluster, and count cells on histology images.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{AutoGui}
+      {Open source python and C\# library for Windows GUI automation and testing.}
+    \resumeSubItem{RecorderSpy}
+      {Windows automation element spy tool for use with AutoGui.}
+    \resumeSubItem{LeshanIOT REST API}
+      {Python wrapper executing REST commands for the eclipse-leshan IOT project.}
+    \resumeSubItem{Midi2Go}
+      {Hackathon project that convers a user's hummed tune into autotuned midi format}
+    \resumeSubItem{Stock Price Predictor}
+      {Calculates pairs-bootstraps to show that momentum investing fails}
+    \resumeSubItem{Semi-Conductor Predictor}
+      {Kaggle project uses machine learning to determine best predictors for conductivity}
+    \resumeSubItem{Cryptography Library}
+      {Educational python library to encrypt, decrypt, and crack various ciphers}
+    \resumeSubItem{ChinesePod Webscraper}
+      {Scapes lesson materials of leading chinese instruction site}
+  \resumeSubHeadingListEnd
+
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Python, Java, C, SQL, Matlab, C\#}
+      \hfill
+      \textbf{Technologies}{: AWS, TensorFlow, React, Git, Jenkins, Bash}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
