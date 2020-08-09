@@ -49,21 +49,29 @@
   }
 }
 
+\newcommand{\resumeItemNoBold}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemNoBold}[2]{\resumeItemNoBold{#1}{#2}\vspace{-4pt}}
+
 
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -75,8 +83,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://lundbird.github.io}{\Large Alex Lundberg}} & Email : \href{mailto:alex.lundberg@gmail.com}{alex.lundberg@gmail.com}\\
-  \href{https://lundbird.github.io}{https://lundbird.github.io} & Mobile : 920-933-9805 \\
-  & Milwaukee, WI
+  \href{https://lundbird.github.io}{https://lundbird.github.io} & Mobile : 920-933-9805, Milwaukee, WI
 \end{tabular*}
 
 
@@ -85,7 +92,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Wisconsin Madison}{Madison, WI}
-      {B.S. Computer Science, Minor Math;  GPA: 3.75/4.00}{Sep. 2014 -- May. 2019}
+      {B.S. Computer Science;  GPA: 3.75/4.00}{May 2019}
   \resumeSubHeadingListEnd
 
 
@@ -93,96 +100,93 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {CommonBond}{New York, NY}
-      {DevOps Engineer}{July 2019 - Current }
-      \resumeItemListStart
-      \resumeItem{Continuous Integration}
-          {Created and Maintained universal .gitlabci for company golang, java, python, javascript pipelines}
-        \resumeItem{AWS Administration}
-          {Managed AWS infrastructure with terraform and troubleshoot redshift, EC2, VPC, S3 issues from developers}
-        \resumeItem{Kubernetes Administration}
-          {Maintain, Upgrade, Improve kubernetes cluster performance and reliability}
-        \resumeItem{Prometheus Administration}
-          {Maintain, Upgrade, Improve monitoring capabilities with prometheus alerting and grafana monitoring}
+  \resumeSubheading
+  {CommonBond}{New York City, NY}
+  {DevOps Engineer}{July 2019 - Current }
+  \resumeItemListStart
+      \resumeItem{GitlabCI}
+        {Created new CI for golang projects which included parellelized build/test, code quality/security, isolated regression testing, and consistent kubernetes deployments. Migrated majority of existing projects to new CI.}
+      \resumeItem{AWS}
+        {Managed all AWS infrastructure with terraform. Created resources for new projects, and modularized existing terraform code and common infrastructure.}
+      \resumeItem{Kubernetes}
+        {Maintain, Upgrade, Improve kubernetes cluster performance and reliability}
+      \resumeItem{Prometheus}
+        {Maintain, Upgrade, Improve monitoring capabilities with prometheus alerting and grafana monitoring}
+      \resumeItem{Service Mesh}
+        {}
+      \resumeItem{On-Call}
+        {Participated in on-call rotation with other DevOps engineers. Resolved errors in gitlabci, jenkins jobs, lambdas, networking firewalls, DNS, schema changes, Looker reporting, ETL failures, and Kubernetes deployments.}
+      \resumeItem{Data Engineering}
+        {}
+      \resumeItem{NATS Streaming}
+        {}
+      \resumeItem{GitOps}
+        {}
       \resumeItemListEnd
 
     \resumeSubheading
       {S\&C Electric}{Chicago, IL}
       {DevOps Engineer Intern}{May 2018 - Aug 2018}
       \resumeItemListStart
-      \resumeItem{Continuous Integration}
-          {Created jenkins pipeline to hook with git commits, build and test on on-prem agents, then push results to email and reporting platform}
-        \resumeItem{Test Automation}
-          {Programmed restful python wrapper libraries over internal testing tools and packaged with pip and deployed using jenkins}
-        \resumeItem{System Administration}
-          {Setup and configured new testing machines. Troubleshooted Linux build errors, hardware failures, and network configuration problems across devices}
+        \resumeItemNoBold{}
+          {Configured new testing machines into Jenkins pipelines. Troubleshooted build errors and network configuration. }
 
       \resumeItemListEnd
 
       \resumeSubheading
       {S\&C Electric}{Chicago, IL}
-      {Data Analyst Intern}{Sep 2017 - Dec 2017}
+      {Software Engineer Intern}{Sep 2017 - Dec 2017}
       \resumeItemListStart
-        \resumeItem{Machine Learning}
-          {Created machine learning models with python pandas and sklearn to predict downtime and failure causing events on injection molding machines}
-        \resumeItem{Analytics}
-          {Programmed vba front-end and SQL queries for department's reporting and analytics}
+        \resumeItemNoBold{}
+          {Created ML models with pandas and sklearn to predict failure causing events on injection molding machines}
       \resumeItemListEnd
 
     \resumeSubheading
       {Domtar}{Nekoosa, WI}
-      {Software Developer Intern}{Jan 2017 - Aug 2017}
+      {Software Engineer Intern}{Jan 2017 - Aug 2017}
       \resumeItemListStart
-        \resumeItem{Scripting}
-          {Reprogrammed unoptimal vb.net controls and added trend visualization scripts}
-        \resumeItem{Development}
-          {Automated tracking of grade change data with C\# application to pull, clean, and display data to management.}
-        \resumeItem{Development}
-          {Created C\# application to set machine tolerance limits and display alarms and data logs to operators on machine failures.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Blood Research Institute}{Milwaukee, WI}
-      {Computer Vision Intern}{May 2015 - Aug 2015}
-      \resumeItemListStart
-        \resumeItem{Image Recognition}
-          {Designed computer vision pipeline to filter, cluster and count cells on histology images.}
+        \resumeItemNoBold{}
+          {Developed C\# apps that pull metrics, set limits, and display alarms/logs to operators and management.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
-\section{Selected Projects}
+\section{Selected Projects and Contributions}
   \resumeSubHeadingListStart
-    \resumeSubItem{Momentum Investing Visualization}
-        {Python visualization shows time span one on x axis and time span two on y axis for any company and time span to illustrate that momentum investing or its inverse fails}
-    \resumeSubItem{ETF Tax Loss Harvester}
-        {Design algorithm using Python API to sell ETF's for tax loss then buy equivalent ETF to harvest tax losses automatically and avoid the wash rule}
+    \resumeSubItem{Gitlab-Python API}
+        {Adds gitlab-kubernetes cluster management feature to popular open-source project which provides a python-api to manage gitlab}
+    \resumeSubItem{LinkerD Route Dashboard}
+        {Provides a grafana dashboard showing route-level metrics for the LinkerD service-mesh}
+    \resumeSubItem{Redis Helm}
+        {Discovered and provided MR to fix bug preventing high-availability of redis-clusters running on Kubernetes. Improved helm chart customizability.}
     \resumeSubItem{AutoGui}
-      {Open source python and C\# library for simple Windows GUI automation/testing using element properties.}
-      \resumeSubItem{RecorderSpy}
-        {Windows automation element spy tool shows GUI element properties for use with AutoGui.}
-    \resumeSubItem{CI/CD Pipeline}
-      {Jenkins pipeline provisions VM's on AWS with terraform, configures with Ansible, and builds vagrant boxes with packer on any successful commit.}
-    \resumeSubItem{Semi-Conductor Predictor}
-      {Kaggle project uses machine learning to determine best predictors for conductivity}
-      \resumeSubItem{ChinesePod Webscraper}
-        {Scapes lesson materials of leading chinese instruction site}
-    \resumeSubItem{Carrot Compiler}
-      {Course project of a full compiler including scanner, parser, type/name checker, and code generator.}
+      {Personal open-source python/C\# library for Windows GUI automation/testing using element properties.}
   \resumeSubHeadingListEnd
 
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \item{
-      \textbf{Languages:}{ Python, Java, C, SQL, C\#}
+      \textbf{Languages:}{ Golang, Python, Java, C, SQL, C\#}
       \hfill
-      \textbf{Technologies:}{ Git, Jenkins, Linux, Terraform, Ansible, Selenium}
+      \textbf{Technologies:}{ Gitlab, Jenkins, AWS, Terraform, Prometheus, Redshift, Looker, NATS}
     }
   \resumeSubHeadingListEnd
 
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubItemNoBold{}
+    {AWS Solution Architect Associate}
+    \resumeSubItemNoBold{}
+    {AWS Developer Associate}
+    \resumeSubItemNoBold{}
+    {AWS SysOps Administrator Associate}
+    \resumeSubItemNoBold{}
+    {CKA - Certified Kubernetes Administrator}
+    \resumeSubItemNoBold{}
+    {CKAD - Certified Kubernetes Application Developer}
+  \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
