@@ -88,15 +88,6 @@
 \end{tabular*}
 
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Wisconsin Madison}{Madison, WI}
-      {B.S. Computer Science;  GPA: 3.75/4.00}{May 2019}
-  \resumeSubHeadingListEnd
-
-
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -106,13 +97,13 @@
   {DevOps Engineer}{July 2019 - Current }
   \resumeItemListStart
       \resumeItem{GitlabCI}
-        {Created new CI for golang projects which added parellelized build/test, code quality/security, isolated regression testing, and consistent Kubernetes/ArgoCD deployments. Migrated majority of existing projects to new CI}
-      \resumeItem{AWS}
-        {Managed all AWS infrastructure with Terraform. Created resources for new projects, and modularized existing Terraform code and common infrastructure.}
+        {Created CI for go projects which added parellelized build/test, code quality/security, regression tests, environment provisioning, and Kubernetes/ArgoCD deployments. Migrated majority of existing projects to new CI}
+      \resumeItem{Terraform}
+        {Managed all infrastructure with Terraform. Standardized all new terraform into two monorepos to manage resources and modules. Added Terragrunt tests, linting, and auto-docs. Used Atlantis for approvals.}
       \resumeItem{Kubernetes}
-        {Managed Kubernetes cluster autoscaling and performed upgrades using Kops. Investigated and installed third-party tools using Helm. Used Traefik to control routing and firewalls.}
+        {Maintained three Kubernetes clusters. Managed cluster autoscaling and upgrades using Kops. Installed third-party apps using Helm. Controlled routing with Traefik. Managed all application manifests in a monorepo.}
       \resumeItem{Prometheus}
-        {Created or imported all Prometheus alert rules/routing and grafana dashboards. Researched and deployed multi-tenant long-term storage solution for Prometheus with Victoria-Metrics.}
+        {Maintained Prometheus as monitoring and alerting solution. Created Prometheus rules and grafana dashboards. Researched and deployed multi-tenant long-term storage solution for Prometheus with Victoria-Metrics.}
       \resumeItem{Service Mesh}
         {Demo'd service mesh solutions Istio, Linkerd, and Maesh. Championed Linkerd service mesh within company. Deployed Linkerd with custom dashboard which dramatically improved monitoring with route level metrics}
       \resumeItem{On-Call}
@@ -121,6 +112,10 @@
         {Architected new data lake ETL framework with AWS-Glue. Created Terraform modules to deploy infrastructure and pyspark libraries to perform common transformations. Trained analytics team in usage.}
       \resumeItem{GitOps}
         {Created templated Kubernetes manifests which use Kustomize to management environment configuration and ArgoCD to synchronize git changes. Updated all active projects to use new templates.}
+      \resumeItem{Security}
+        {Imported paloalto VPN into Terraform and created a backup solution using a standby replica and automated DNS failover. Implemented 2FA integration with onelogin identity provider.}
+      \resumeItem{Management}
+        {Managed two engineers for four months. Migrated project management from Jira to Gitlab. Standardized support requests with templates. Allocated dedicated devops engineer to each product team.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -155,11 +150,11 @@
 \section{Selected Projects and Contributions}
   \resumeSubHeadingListStart
     \resumeSubItem{Gitlab-Python API}
-        {Adds Gitlab-Kubernetes cluster management feature to popular open-source project that provides a python API to manage Gitlab}
+        {Adds Kubernetes cluster management feature to Gitlab api.}
     \resumeSubItem{Linkerd Route Dashboard}
         {Provides a grafana dashboard showing route-level metrics for the Linkerd service mesh}
     \resumeSubItem{Redis Helm}
-        {Discovered and provided MR to fix bug preventing high-availability of redis-clusters running on Kubernetes. Improved Helm chart customizability.}
+        {Provided fix to bug preventing high-availability of redis-clusters running on Kubernetes.}
     \resumeSubItem{AutoGui}
       {Personal open-source Python/C\# library for Windows GUI automation/testing using element properties}
   \resumeSubHeadingListEnd
@@ -167,12 +162,19 @@
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \item{
-      \textbf{Technologies:}{ Git, Gitlab, Kubernetes, Jenkins, AWS, Terraform, Prometheus, Redshift, Looker, NATS} \\
+      \textbf{Technologies:}{ Git, Gitlab, Kubernetes, Jenkins, AWS, Terraform, Prometheus, Snowflake, Looker, NATS} \\
       \textbf{Languages:}{ Golang, Python, Java, C, SQL, C\#}
       \hfill
     }
   \resumeSubHeadingListEnd
 
+  %-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Wisconsin Madison}{Madison, WI}
+    {B.S. Computer Science;  GPA: 3.75/4.00}{May 2019}
+\resumeSubHeadingListEnd
 \section{Active Certifications}
   \resumeSubHeadingListStart
     \resumeSubItemNoBold{}
